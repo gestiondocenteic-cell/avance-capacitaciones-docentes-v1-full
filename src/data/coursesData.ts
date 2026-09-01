@@ -10,6 +10,7 @@ export const COURSES_METADATA: CourseMetadata[] = [
     totalSesiones: 6,
     criterioValidacion: 'Validación de participación activa en las 6 sesiones',
     color: 'emerald',
+    urlAulaVirtual: 'https://aulavirtualiec.continental.edu.pe/course/section.php?id=30709',
   },
   {
     id: 'c2',
@@ -20,6 +21,7 @@ export const COURSES_METADATA: CourseMetadata[] = [
     totalSesiones: 3,
     criterioValidacion: 'Presencial o las 2 sesiones virtuales',
     color: 'indigo',
+    urlAulaVirtual: 'https://aulavirtualiec.continental.edu.pe/course/section.php?id=30710',
   },
   {
     id: 'c3',
@@ -30,6 +32,7 @@ export const COURSES_METADATA: CourseMetadata[] = [
     totalSesiones: 4,
     criterioValidacion: 'Participación confirmada en todas las sesiones',
     color: 'amber',
+    urlAulaVirtual: 'https://aulavirtualiec.continental.edu.pe/course/section.php?id=30711',
   },
   {
     id: 'c4',
@@ -40,6 +43,7 @@ export const COURSES_METADATA: CourseMetadata[] = [
     totalSesiones: 2,
     criterioValidacion: 'Participación integral en ambas jornadas',
     color: 'blue',
+    urlAulaVirtual: 'https://aulavirtualiec.continental.edu.pe/course/section.php?id=30712',
   },
   {
     id: 'c5',
@@ -50,5 +54,6 @@ export const COURSES_METADATA: CourseMetadata[] = [
     totalSesiones: 1,
     criterioValidacion: 'Asistencia y evaluación con entrega de instrumento',
     color: 'violet',
+    urlAulaVirtual: 'https://aulavirtualiec.continental.edu.pe/course/section.php?id=30713',
   },
 ];

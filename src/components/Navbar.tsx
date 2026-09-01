@@ -79,7 +79,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
 
             <button
-
+              onClick={() => setActiveTab('dashboard')}
               className={`flex items-center space-x-1.5 px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all ${
                 activeTab === 'dashboard'
                   ? 'bg-emerald-600 text-white shadow-sm'
@@ -90,17 +90,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span>Panel General</span>
             </button>
 
-            <button
-              onClick={() => setActiveTab('calendar')}
-              className={`flex items-center space-x-1.5 px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all ${
-                activeTab === 'calendar'
-                  ? 'bg-emerald-600 text-white shadow-sm'
-                  : 'text-slate-300 hover:text-white hover:bg-slate-800'
-              }`}
-            >
-              <Calendar className="w-4 h-4" />
-              <span className="hidden md:inline">Calendario Cursos</span>
-            </button>
+
           </nav>
         </div>
       </div>

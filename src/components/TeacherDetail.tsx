@@ -19,6 +19,7 @@ import {
   ChevronDown,
   ChevronUp,
   FileCheck,
+  ExternalLink,
 } from 'lucide-react';
 
 interface TeacherDetailProps {
@@ -324,6 +325,53 @@ export const TeacherDetail: React.FC<TeacherDetailProps> = ({ docente, onBack })
                     <span className="font-bold text-slate-700">Criterio Institucional de Validación:</span>{' '}
                     <span className="text-slate-600">{cap.criterioValidacion}</span>
                   </div>
+
+                  {/* Botón de ingreso al Aula Virtual si el curso está pendiente */}
+                  {!cap.completado && meta?.urlAulaVirtual && (
+                    <div className="bg-amber-50/90 border border-amber-300 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-xs">
+                      <div className="flex items-start gap-3">
+                        <div className="p-2 bg-amber-100 text-amber-700 rounded-lg shrink-0 mt-0.5">
+                          <AlertTriangle className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <h4 className="text-xs sm:text-sm font-bold text-amber-950">
+                            Curso Pendiente de Completar
+                          </h4>
+                          <p className="text-xs text-amber-900 mt-0.5 leading-relaxed">
+                            Si este curso se encuentra pendiente, ingrese al aula virtual institucional para revisar el contenido, actividades y regularizar su aprobación.
+                          </p>
+                        </div>
+                      </div>
+                      <a
+                        href={meta.urlAulaVirtual}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-amber-600 hover:bg-amber-700 active:bg-amber-800 text-white text-xs font-bold rounded-lg shadow-sm transition-all whitespace-nowrap shrink-0 hover:shadow-md cursor-pointer"
+                      >
+                        <span>Ingresar al Aula Virtual para completarlo</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+                  )}
+
+                  {/* Acceso a materiales si ya está completado */}
+                  {cap.completado && meta?.urlAulaVirtual && (
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-white px-4 py-3 rounded-xl border border-slate-200 text-xs">
+                      <span className="text-slate-600 flex items-center gap-2">
+                        <BookOpen className="w-4 h-4 text-emerald-600 shrink-0" />
+                        <span>Materiales y grabaciones disponibles en el Aula Virtual</span>
+                      </span>
+                      <a
+                        href={meta.urlAulaVirtual}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-emerald-700 hover:text-emerald-800 font-bold hover:underline"
+                      >
+                        <span>Ir al Aula Virtual</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+                  )}
 
                   {/* Sessions Grid */}
                   <div>

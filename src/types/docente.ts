@@ -35,4 +35,5 @@ export interface CourseMetadata {
   totalSesiones: number;
   criterioValidacion: string;
   color: string;
+  urlAulaVirtual?: string;
 }
