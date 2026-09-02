@@ -1,6 +1,6 @@
 import React from 'react';
 import { Docente } from '../types/docente';
-import { Mail, CreditCard, Award, ChevronRight, CheckCircle2, Clock } from 'lucide-react';
+import { Award, ChevronRight, CheckCircle2, Clock } from 'lucide-react';
 
 interface TeacherCardProps {
   docente: Docente;
@@ -35,36 +35,24 @@ export const TeacherCard: React.FC<TeacherCardProps> = ({ docente, onSelect }) =
     >
       <div>
         {/* Header Row */}
-        <div className="flex items-start justify-between gap-2 mb-3">
+        <div className="flex items-start justify-between gap-2 mb-4">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-full bg-slate-100 text-slate-700 font-bold flex items-center justify-center border border-slate-200 text-sm group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors">
+            <div className="w-10 h-10 rounded-full bg-slate-100 text-slate-700 font-bold flex items-center justify-center border border-slate-200 text-sm group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors shrink-0">
               {docente.apellidosNombres.split(' ').slice(0, 2).map((n) => n[0]).join('')}
             </div>
             <div>
-              <h3 className="font-semibold text-slate-900 text-sm group-hover:text-emerald-700 transition-colors line-clamp-1">
+              <h3 className="font-semibold text-slate-900 text-sm group-hover:text-emerald-700 transition-colors line-clamp-2">
                 {docente.apellidosNombres}
               </h3>
-              <div className="flex items-center space-x-2 text-xs text-slate-500 mt-0.5">
-                <span className="flex items-center gap-1">
-                  <CreditCard className="w-3 h-3" />
-                  DNI: {docente.dni}
-                </span>
-              </div>
             </div>
           </div>
           <span
-            className={`text-xs px-2.5 py-1 rounded-full border font-medium ${getBadgeStyle(
+            className={`text-xs px-2.5 py-1 rounded-full border font-medium shrink-0 ${getBadgeStyle(
               docente.observacion
             )}`}
           >
             {docente.observacion}
           </span>
-        </div>
-
-        {/* Email */}
-        <div className="flex items-center text-xs text-slate-500 mb-4 truncate">
-          <Mail className="w-3.5 h-3.5 mr-1.5 text-slate-400 shrink-0" />
-          <span className="truncate">{docente.correo}</span>
         </div>
 
         {/* Course Progress Indicators */}

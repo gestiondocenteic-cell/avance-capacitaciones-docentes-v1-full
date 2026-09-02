@@ -10,8 +10,6 @@ import {
   Clock,
   Printer,
   Share2,
-  CreditCard,
-  Mail,
   BookOpen,
   Calendar,
   AlertTriangle,
@@ -122,18 +120,6 @@ export const TeacherDetail: React.FC<TeacherDetailProps> = ({ docente, onBack })
             </div>
 
             <div className="flex flex-wrap items-center gap-4 text-xs text-slate-300 pt-1">
-              <div className="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
-                <CreditCard className="w-3.5 h-3.5 text-emerald-400" />
-                <span>DNI:</span>
-                <strong className="text-white font-mono">{docente.dni}</strong>
-              </div>
-
-              <div className="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
-                <Mail className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Correo:</span>
-                <strong className="text-white">{docente.correo}</strong>
-              </div>
-
               <div className="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
                 <span>Evaluación:</span>
                 <span className={`px-2 py-0.5 rounded text-[11px] font-bold border ${getObservationBadge(docente.observacion)}`}>

@@ -78,19 +78,19 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span>Buscar Docente</span>
             </button>
 
+
+
             <button
-              onClick={() => setActiveTab('dashboard')}
+              onClick={() => setActiveTab('calendar')}
               className={`flex items-center space-x-1.5 px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all ${
-                activeTab === 'dashboard'
+                activeTab === 'calendar'
                   ? 'bg-emerald-600 text-white shadow-sm'
                   : 'text-slate-300 hover:text-white hover:bg-slate-800'
               }`}
             >
-              <BarChart3 className="w-4 h-4" />
-              <span>Panel General</span>
+              <Calendar className="w-4 h-4" />
+              <span className="hidden md:inline">Calendario Cursos</span>
             </button>
-
-
           </nav>
         </div>
       </div>
