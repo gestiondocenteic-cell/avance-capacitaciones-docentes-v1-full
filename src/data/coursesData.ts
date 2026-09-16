@@ -21,7 +21,7 @@ export const COURSES_METADATA: CourseMetadata[] = [
     totalSesiones: 3,
     criterioValidacion: 'Presencial o las 2 sesiones virtuales',
     color: 'indigo',
-    urlAulaVirtual: 'https://aulavirtualiec.continental.edu.pe/course/section.php?id=30710',
+    urlAulaVirtual: 'https://aulavirtualiec.continental.edu.pe/course/section.php?id=30711',
   },
   {
     id: 'c3',
@@ -32,7 +32,7 @@ export const COURSES_METADATA: CourseMetadata[] = [
     totalSesiones: 4,
     criterioValidacion: 'Participación confirmada en todas las sesiones',
     color: 'amber',
-    urlAulaVirtual: 'https://aulavirtualiec.continental.edu.pe/course/section.php?id=30711',
+    urlAulaVirtual: 'https://aulavirtualiec.continental.edu.pe/course/section.php?id=31261',
   },
   {
     id: 'c4',
